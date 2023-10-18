@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "singularName": "shop",
+    "pluralName": "shops",
+    "displayName": "Shops",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "phone": {
+      "type": "text"
+    },
+    "address": {
+      "type": "text"
+    },
+    "street": {
+      "type": "text"
+    },
+    "latitude": {
+      "type": "text"
+    },
+    "longitude": {
+      "type": "text"
+    },
+    "website": {
+      "type": "text"
+    },
+    "waiting": {
+      "type": "text"
+    },
+    "avgTime": {
+      "type": "text"
+    },
+    "catagories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::catagory.catagory"
+    },
+    "workingHours": {
+      "type": "text"
+    },
+    "about": {
+      "type": "text"
+    },
+    "offer": {
+      "type": "text"
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "shop"
+    }
+  }
+}
